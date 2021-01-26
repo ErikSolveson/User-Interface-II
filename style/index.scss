@@ -1,3 +1,7 @@
+html {
+  font-size: 100%;
+}
+
 body {
   background-color: #bcece0;
   font-family: "Suranna";
@@ -71,7 +75,12 @@ nav.primary-nav a:hover {
   margin-left: 1em;
   margin-bottom: 2em;
   flex-wrap: wrap;
-  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.45);
+  .left-sidebar {
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.15);
+    padding: 1em;
+    background-color: #58ab9468;
+    border-radius: 4px;
+  }
 }
 
 .hero-banner img {
@@ -134,7 +143,7 @@ body::-webkit-scrollbar-thumb {
 // Media Queries!
 
 @media screen and (max-width: 1200px) {
-  #hero {
+  .hero-banner {
     box-shadow: none;
   }
 }
@@ -148,5 +157,51 @@ body::-webkit-scrollbar-thumb {
       width: 218px;
       align-items: center;
     }
+  }
+  nav.primary-nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em;
+    a {
+      width: 6em;
+      font-size: 1.5em;
+      text-align: center;
+    }
+  }
+  #hero img {
+    max-width: 100%;
+  }
+  header h1 {
+    margin: auto;
+    text-align: center;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  .left-sidebar {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .hero-banner {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+  }
+}
+
+@media (min-width: 1225px) {
+  .hero-banner {
+  }
+}
+
+@media (max-width: 400px) {
+  #hero img {
+    display: none;
   }
 }
